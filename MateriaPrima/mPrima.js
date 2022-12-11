@@ -114,7 +114,6 @@ on(document, 'click', '.btnBorrar', e => {
     }
 })
 
-// Procedimiento Editar
 let idForm = 0;
 on(document, 'click', '.btnEditar', e => {
     const fila = e.target.parentNode.parentNode
@@ -122,8 +121,14 @@ on(document, 'click', '.btnEditar', e => {
     const nombreForm = fila.children[1].innerHTML
     const costoForm = fila.children[2].innerHTML
     const cantidadForm = fila.children[3].innerHTML
-    const proveedorForm = fila.children[4].innerHTML
+    let proveedorForm = document.getElementById('proveedor')
+    let nombreproveedorForm = fila.children[4].innerHTML
     console.log(`Id ${idForm} nombre ${nombreForm} costo ${costoForm} cantidad ${cantidadForm} proveedor ${proveedorForm}`)
+    for (let i = 0; i < 5; i++) {
+        if (proveedorForm[i].innerText == nombreproveedorForm) {
+            proveedorForm.value = proveedorForm[i].value
+        }
+    }
     nombre.value = nombreForm
     costo.value = costoForm
     cantidad.value = cantidadForm
