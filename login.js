@@ -38,7 +38,7 @@ formLogin.addEventListener('submit', (e) => {
                           })
                           .then(() => {
                             //Redirigimos la pagina cuando inicie sesion
-                           window.location.href="http://127.0.0.1:3000/Client/Producto/index.html"
+                           window.location.href="https://idunnowhydamr.github.io/prazer/Producto/index.html"
                            });
                     }else{
                         Swal.fire({
